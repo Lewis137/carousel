@@ -14,9 +14,17 @@
     More info: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
 */
 
+body {
+  font-family: Bebas Neue;
+}
+
 .carousel {
   max-width: 600px;
   position: relative;
+  margin: 0 auto;
+
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .carousel .carousel-item,
@@ -47,12 +55,16 @@
 .carousel .carousel-actions button {
   border-radius: 50px;
   background-color: white;
-  border: 0;
+  border: none;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   width: 40px;
   height: 40px;
+}
+
+.carousel .carousel-actions button:hover {
+  box-shadow: 0px 0px 12px -3px rgba(0, 0, 0, 0.75);
 }
 
 .carousel .carousel-actions button#carousel-button-prev {
@@ -70,4 +82,20 @@
   100% {
     opacity: 1;
   }
+}
+
+.film-title {
+  bottom: 0px;
+  right: 12px;
+  margin: 5px;
+  font-size: 2em;
+  position: absolute;
+}
+
+.carousel-item .red {
+  color: crimson;
+}
+
+.carousel-item .white {
+  color: white;
 }
