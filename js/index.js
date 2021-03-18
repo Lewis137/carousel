@@ -23,6 +23,7 @@ function moveToPrevSlide () {
 
   slides[slidePosition].classList.remove('carousel-item-hidden')
   slides[slidePosition].classList.add('carousel-item-visible')
+  resetTimer()
 }
 
 let timer = setInterval(autoMove, 6000)
@@ -48,3 +49,17 @@ function moveToNextSlide () {
 function autoMove () {
   moveToNextSlide()
 }
+
+// key and keyCode used for compatibility
+
+window.addEventListener('keydown', function (e) {
+  e.preventDefault()
+  let key = e.key,
+    keyCode = e.keyCode
+
+  if (key === 'ArrowRight' || keyCode === 39) {
+    moveToNextSlide()
+  } else if ((key && 'ArrowLeft' === key) || keyCode === 37) {
+    moveToPrevSlide()
+  }
+})

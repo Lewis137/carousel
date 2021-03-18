@@ -1,14 +1,16 @@
+html,
 body {
-  font-family: Bebas Neue;
+  font-family: 'Bebas Neue', 'Impact', 'Verdana', sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
+  text-transform: uppercase;
 }
 
 .carousel {
   max-width: 600px;
   position: relative;
   margin: 0 auto;
-
   top: 50%;
-  transform: translateY(-50%);
 }
 
 .carousel .carousel-item,
